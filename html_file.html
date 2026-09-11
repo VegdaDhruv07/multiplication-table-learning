@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multiplication Table</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔢 Multiplication Table</h1>
+
+        <p class="subtitle">
+            ✨ Learn multiplication easily! ✨
+        </p>
+
+        <div class="input-section">
+
+            <label for="num">Enter Number</label>
+
+            <div class="input-row">
+
+                <input
+                    type="number"
+                    id="num"
+                    class="input-box"
+                    placeholder="Enter number"
+                >
+
+                <button onclick="runCode()">
+                    Run 🚀
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="result">
+
+            <h2>📚 Your Table</h2>
+
+            <pre id="result">Your table will appear here...</pre>
+
+        </div>
+
+        <div class="tip">
+            💡 Practice every day and become a Math Star! ⭐
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function runCode() {
+
+            let num = document.getElementById("num").value;
+
+            if (num === "") {
+                alert("Please enter a number!");
+                return;
+            }
+
+            num = Number(num);
+
+            let output = "";
+
+            for (let i = 1; i <= 10; i++) {
+
+                output += `${num} × ${i} = ${num * i}\n`;
+
+            }
+
+            document.getElementById("result").textContent = output;
+        }
+
+    </script>
+
+</body>
+</html>
